@@ -2,6 +2,7 @@
 음료수 얼려 먹기
 """
 import copy
+import time
 n, m = map(int, input().split())
 
 graph = []
@@ -10,7 +11,7 @@ for i in range(n):
 
 temp = copy.deepcopy(graph)
 
-''' 첫번째 방법 '''
+'''첫번째 방법'''
 
 
 def dfs(x, y):
@@ -28,13 +29,14 @@ def dfs(x, y):
 
 
 result = 0
+start = time.time()
 for i in range(n):
     for j in range(m):
         if dfs(i, j) == True:
             result += 1
 
 print(result)
-
+print(f'time solution 1 : {time.time() - start}')
 ''' 두번째 방법 '''
 
 graph = temp
@@ -65,9 +67,11 @@ def dfs(x, y):
 
 
 result = 0
+start = time.time()
 for i in range(n):
     for j in range(m):
         if dfs(i, j) == True:
             result += 1
 
 print(result)
+print(f'time solution 2 : {time.time() - start}')
