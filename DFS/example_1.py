@@ -10,7 +10,7 @@ for i in range(n):
 
 temp = copy.deepcopy(graph)
 
-'''첫번째 방법'''
+''' 첫번째 방법 '''
 
 
 def dfs(x, y):
