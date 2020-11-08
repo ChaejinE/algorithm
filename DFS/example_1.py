@@ -1,11 +1,14 @@
 """
 음료수 얼려 먹기
 """
+import copy
 n, m = map(int, input().split())
 
 graph = []
 for i in range(n):
     graph.append(list(map(int, input())))
+
+temp = copy.deepcopy(graph)
 
 '''첫번째 방법'''
 
@@ -33,6 +36,8 @@ for i in range(n):
 print(result)
 
 ''' 두번째 방법 '''
+
+graph = temp
 
 dx = [-1, 1, 0, 0]
 dy = [0, 0, -1, 1]
